@@ -1,7 +1,7 @@
 cmake_minimum_required (VERSION 3.0)
 
 # Name our project
-project (blink)
+project (blinkLed)
 
 # Create a variable that holds the path to our libwiringPi.so file
 #set (WPI_PATH /home/lukasz/dev/cmakeapp/WiringPi/wiringPi)
@@ -19,7 +19,7 @@ include_directories (include)
 
 # Add all the *.c files in our source directory to our executable output
 FILE(GLOB SRC_FILES src/*.cpp)
-add_executable(blink ${SRC_FILES})
+add_executable("${PROJECT_NAME}" ${SRC_FILES})
 
 # Link the pre-compiled wiringPi library to the executable we just declared 
 #target_link_libraries(blink ${WPI_LIB})
