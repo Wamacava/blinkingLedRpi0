@@ -87,15 +87,14 @@ public:
  
 int main(int argc, char *argv[])
 {
-//    LinuxGPIO gpio27(27);
-//    gpio27.SetDirection(true);
-//    bool on = true;
-//    for (;;)
- //   {
-//        printf("Switching %s the LED...\n", on ? "on" : "off");
-//        gpio27.SetValue(on);
-//        on = !on;
-//        sleep(1);
-//    }
-    printf("Switching %s the LED...\n", "off");
+    LinuxGPIO gpio27(27);
+    gpio27.SetDirection(true);
+    bool on = true;
+    for (;;)
+    {
+        printf("Switching %s the LED...\n", on ? "on" : "off");
+        gpio27.SetValue(on);
+        on = !on;
+        sleep(1);
+    }
 }
