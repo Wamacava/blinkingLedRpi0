@@ -1,5 +1,13 @@
 cmake_minimum_required (VERSION 3.0)
 
+
+# Usually CMake is compiling simple test program and runs it
+# In case of cross compiling the compiled program can't be run on host 
+# so to avoid trying to run compiled program we can check by compiling library
+# other solution is set CMAKE_C_COMPILER_WORKS
+#set(CMAKE_C_COMPILER_WORKS TRUE)
+set(CMAKE_TRY_COMPILE_TARGET_TYPE "STATIC_LIBRARY")
+
 # Name our project
 project (blinkLed)
 
