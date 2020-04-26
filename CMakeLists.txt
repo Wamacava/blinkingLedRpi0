@@ -6,6 +6,7 @@ cmake_minimum_required (VERSION 3.0)
 # so to avoid trying to run compiled program we can check by compiling library
 # other solution is set CMAKE_C_COMPILER_WORKS
 set(CMAKE_C_COMPILER_WORKS TRUE)
+set(CMAKE_CXX_COMPILER_WORKS TRUE)
 #set(CMAKE_TRY_COMPILE_TARGET_TYPE "STATIC_LIBRARY")
 
 # Name our project
