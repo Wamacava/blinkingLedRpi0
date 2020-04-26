@@ -101,4 +101,5 @@ int main(int argc, char *argv[])
         on = !on;
         sleep(1);
     }
+    return 0;
 }
