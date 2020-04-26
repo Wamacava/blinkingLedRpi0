@@ -10,13 +10,13 @@ set(CMAKE_CXX_COMPILER_WORKS TRUE)
 #set(CMAKE_TRY_COMPILE_TARGET_TYPE "STATIC_LIBRARY")
 
 # Name our project
-project (blinkLed)
+project ("blinkLed")
 
 # Create a variable that holds the path to our libwiringPi.so file
 #set (WPI_PATH /home/lukasz/dev/cmakeapp/WiringPi/wiringPi)
 
 # Add the local ‘include’ directory and the wiringPi directory to grab headers
-include_directories (include)
+include_directories ("include")
 
 # Actually find the wiringPi library object
 # find_library(WPI_LIB wiringPi HINTS ${WPI_PATH} NO_CMAKE_FIND_ROOT_PATH)
@@ -27,8 +27,8 @@ include_directories (include)
 #endif()
 
 # Add all the *.c files in our source directory to our executable output
-FILE(GLOB SRC_FILES src/*.cpp)
-add_executable("${PROJECT_NAME}" ${SRC_FILES})
+FILE(GLOB SRC_FILES "src/*.cpp")
+add_executable("${PROJECT_NAME}" "${SRC_FILES}")
 
 # Link the pre-compiled wiringPi library to the executable we just declared 
 #target_link_libraries(blink ${WPI_LIB})
