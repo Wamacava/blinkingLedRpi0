@@ -5,12 +5,14 @@ In this directory do:
 
 $ git clone https://github.com/raspberrypi/tools.git
 
-2) run $ cmake . -DCMAKE_TOOLCHAIN_FILE=toolchain-rpi.cmake
+2) change your compiler path in toolchain-rpi.cmake
 
-3) run $ make
+3) run $ cmake . -DCMAKE_TOOLCHAIN_FILE=toolchain-rpi.cmake
 
-4) scp include/libstdc++.so.6 root@192.168.0.60:/usr/lib/
+4) run $ make
 
-5) scp blinkLed root@192.168.0.60:/home/root/
+5) scp include/libstdc++.so.6 root@192.168.0.60:/usr/lib/
 
-6) run program on rpi
+6) scp blinkLed root@192.168.0.60:/home/root/
+
+7) run program on rpi
