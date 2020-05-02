@@ -1,18 +1,20 @@
 Following https://medium.com/@au42/the-useful-raspberrypi-cross-compile-guide-ea56054de187
 In this directory do:
 
-1) Clone tools:
+1) Clone this repo in the proper location and cd to the project directory
+
+2) In project directory clone tools:
 
 $ git clone https://github.com/raspberrypi/tools.git
 
-2) change your compiler path in toolchain-rpi.cmake
+3) run make application script 
+$./make-application.sh
 
-3) run $ cmake . -DCMAKE_TOOLCHAIN_FILE=toolchain-rpi.cmake
+4) Copy the missing library to you raspberry pi (change IP in command)
+$ scp include/libstdc++.so.6 root@192.168.0.60:/usr/lib/
 
-4) run $ make
+5) Copy compiled program to raspberry pi (change IP in command)
+$ scp blinkLed root@192.168.0.60:/usr/bin/
 
-5) scp include/libstdc++.so.6 root@192.168.0.60:/usr/lib/
-
-6) scp blinkLed root@192.168.0.60:/home/root/
-
-7) run program on rpi
+6) run program on rpi
+$ blinking-service
