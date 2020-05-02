@@ -10,7 +10,7 @@ set(CMAKE_CXX_COMPILER_WORKS TRUE)
 #set(CMAKE_TRY_COMPILE_TARGET_TYPE "STATIC_LIBRARY")
 
 # Name our project
-project ("blink-service")
+project ("blinking-service")
 
 # Create a variable that holds the path to our libwiringPi.so file
 #set (WPI_PATH /home/lukasz/dev/cmakeapp/WiringPi/wiringPi)

@@ -4,4 +4,4 @@ CMakeCache.txt
 CMakeFiles/*
 Makefile
 cmake_install.cmake
-blink-service
+blinking-service
